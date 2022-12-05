@@ -1,6 +1,5 @@
 public class StartsServise {
 
-
     public long sum(long[] sales) {
         long sum = 0;
         for (long sale : sales) {
@@ -46,6 +45,17 @@ public class StartsServise {
         long medium = medium(sales);
         for (long sale : sales) {
             if (sale > medium) {
+                count++;
+            }
+
+        }
+        return count;
+    }
+    public int belowMedium(long[] sales) {
+        int count = 0;
+        long medium = medium(sales);
+        for (long sale : sales) {
+            if (sale < medium) {
                 count++;
             }
 
